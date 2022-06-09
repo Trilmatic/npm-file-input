@@ -11,7 +11,7 @@ This project is a VUEJS @3 form file input component that can hande file draging
 
 ### Install via NPM
 
-```
+```console
 npm install --save formio-file
 ```
 
