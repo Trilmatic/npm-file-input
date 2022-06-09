@@ -42,7 +42,7 @@ import 'formio-file/src/formio-file.css'
 - content of the input
 - 
 
-**default**
+*default*
 
 ```html
 <span><strong>Upload file</strong></span>
@@ -51,13 +51,13 @@ import 'formio-file/src/formio-file.css'
 #### fileIcon 
 - icon of selected file
 
-**default**
+*default*
 
 - basic svg file icon
 #### fileRemove 
 - Manual removal of file
 
-**default**
+*default*
 
 ´Remove´
 
@@ -70,7 +70,7 @@ import 'formio-file/src/formio-file.css'
 - Boolean
 - defines if the input is a dropzone or a basic input
 
-**default**
+*default*
 
 `false`
 
@@ -79,14 +79,14 @@ import 'formio-file/src/formio-file.css'
 - Boolean
 - defines if the input is required
 
-**default**
+*default*
 
 `false`
 #### classList 
 - Object
 - defines the classes on the instance
 
-**default**
+*default*
 
 ```js
 return {
@@ -108,7 +108,7 @@ return {
 - Boolean
 - if multiple files can be selected
 
-**default**
+*default*
 
 `false`
 #### accept
@@ -121,7 +121,7 @@ return {
 - String
 - defines the validation message of input
 
-**default**
+*default*
 
 `This field is required or invalid.`
 #### validation
@@ -132,7 +132,7 @@ return {
 - validate function will be called with anz changes in the files list
 - Two variables are passed into the function (Files - lisst of currently selected files, required - the prop that defines if the input is required)
 
-**default**
+*default*
 
 ```js
 function (files, required) {
