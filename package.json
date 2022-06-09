@@ -1,0 +1,37 @@
+{
+  "name": "formio-file",
+  "version": "1.0.0",
+  "description": "Vuejs plugin for form file input",
+  "main": "dist/formio-file.umd.js",
+  "module": "dist/formio-file.esm.js",
+  "unpkg": "dist/formio-file.min.js",
+  "browser": {
+    "./sfc": "src/formio-file.vue"
+  },
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/my-component.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/my-component.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/my-component.min.js"
+  },
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "rollup": "^1.17.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "keywords": [
+    "form",
+    "forms",
+    "file",
+    "input",
+    "dropzone",
+    "filedrop",
+    "vuejs",
+    "vue"
+  ],
+  "author": "Petr Suchánek",
+  "license": "MIT"
+}
