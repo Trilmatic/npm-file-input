@@ -1,10 +1,11 @@
 {
   "name": "formio-file",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Vuejs plugin for form file input",
   "main": "dist/formio-file.umd.js",
   "module": "dist/formio-file.esm.js",
   "unpkg": "dist/formio-file.min.js",
+  "style": "dist/formio-file.css",
   "browser": {
     "./sfc": "src/formio-file.vue"
   },

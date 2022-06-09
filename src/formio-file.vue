@@ -1,13 +1,5 @@
 <template>
-  <div
-    :class="[
-      drop
-        ? String(classList.containerDropzone)
-        : String(classList.containerInput),
-    ]"
-    @dragover.prevent
-    @drop.prevent
-  >
+  <div :class="[canDrop ? String(classList.containerDropzone) : String(classList.containerInput),]" @dragover.prevent @drop.prevent>
     <p v-if="title" :class="classList.label">
       {{ title }}<span :class="classList.required" v-if="required">*</span>
     </p>
@@ -19,7 +11,7 @@
       <span :class="classList.icon"><slot name="icon"></slot></span>
       <slot name="content"
         ><span><strong>Upload file</strong></span
-        ><span v-if="drop"
+        ><span v-if="canDrop"
           ><i>Drop files or click here to upload</i></span
         ></slot
       >
@@ -90,7 +82,7 @@ export default {
     title: {
       type: String,
     },
-    drop: {
+    canDrop: {
       type: Boolean,
       default: false,
     },
@@ -152,7 +144,7 @@ export default {
       this.$emit("change", this.files);
     },
     ondrop(e) {
-      if (!this.drop) return;
+      if (!this.canDrop) return;
       if (this.multiple) {
         this.files = e.dataTransfer.files;
       } else {
