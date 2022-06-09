@@ -5,7 +5,7 @@
 * [Documentation](#documentation)
 
 ## General Info
-This project is a VUEJS @3 form input component that can hande file draging, validation and more.
+This project is a VUEJS @3 form file input component that can hande file draging, validation and more.
 
 ## Setup
 
@@ -37,12 +37,29 @@ import 'formio-file/src/formio-file.css'
 
 #### icon
  - icon visible in the input
+ - emplty by default
 #### content  
 - content of the input
+- 
+
+**default**
+
+```markdown
+<span><strong>Upload file</strong></span>
+<span v-if="drop"><i>Drop files or click here to upload</i></span>
+```
 #### fileIcon 
 - icon of selected file
+
+**default**
+
+- basic svg file icon
 #### fileRemove 
 - Manual removal of file
+
+**default**
+
+´Remove´
 
 ### PROPS
 #### title 
@@ -112,6 +129,7 @@ return {
 - Function
 - defines the validation function
 - the required output of the function is Boolean (true/false)
+- validate function will be called with anz changes in the files list
 - Two variables are passed into the function (Files - lisst of currently selected files, required - the prop that defines if the input is required)
 
 **default**
@@ -123,3 +141,30 @@ function (files, required) {
     return true;
 }
 ```
+
+You can also call the validate function remotly from parent component
+
+```markdown
+<template>
+    <button @click="$refs.file.validate()">Validate</button>
+    <formio-file
+        ref="file"
+    ></formio-file>
+</template>
+```
+
+
+## EVENTS
+
+### change
+- emits when the file list has changed
+
+```markdown
+<template>
+    <formio-file
+        ref="file"
+        @change="fileHasChanged()"
+    ></formio-file>
+</template>
+```
+
