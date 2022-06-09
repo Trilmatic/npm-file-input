@@ -1,6 +1,6 @@
 {
   "name": "formio-file",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Vuejs plugin for form file input",
   "main": "dist/formio-file.umd.js",
   "module": "dist/formio-file.esm.js",
@@ -10,9 +10,9 @@
   },
   "scripts": {
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/my-component.umd.js",
-    "build:es": "rollup --config build/rollup.config.js --format es --file dist/my-component.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/my-component.min.js"
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/formio-file.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/formio-file.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/formio-file.min.js"
   },
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.3",
