@@ -59,7 +59,7 @@ import 'formio-file/src/formio-file.css'
 
 *default*
 
-´Remove´
+`Remove`
 
 ### PROPS
 #### title 
