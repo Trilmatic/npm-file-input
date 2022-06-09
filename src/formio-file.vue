@@ -1,5 +1,13 @@
 <template>
-  <div :class="[canDrop ? String(classList.containerDropzone) : String(classList.containerInput),]" @dragover.prevent @drop.prevent>
+  <div
+    :class="[
+      canDrop
+        ? String(classList.containerDropzone)
+        : String(classList.containerInput),
+    ]"
+    @dragover.prevent
+    @drop.prevent
+  >
     <p v-if="title" :class="classList.label">
       {{ title }}<span :class="classList.required" v-if="required">*</span>
     </p>
@@ -55,28 +63,6 @@
   </div>
 </template>
 <script>
-/* 
-SLOTS:
-
-- icon
-- content
-- fileIcon
-- fileRemove
-
------------
-
-PROPS
-
-- title (string)
-- classList (Object)
-- drop (boolen, default: false)
-- multiple (boolen, default: false)
-- accept (string, default: "")
-- required (boolen, default: false)
-- validationMessage (string, default: This field is required or invalid.)
-- validation (function)
-
-*/
 export default {
   props: {
     title: {
@@ -90,8 +76,8 @@ export default {
       type: Object,
       default: () => {
         return {
-          containerDropzone: "formio--file formio--drop-zone",
           containerInput: "formio--file formio--no-drop",
+          containerDropzone: "formio--file formio--drop-zone",
           view: "formio--file-view",
           icon: "formio--file-icon",
           label: "formio--label",

@@ -1,6 +1,6 @@
 {
   "name": "formio-file",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Vuejs plugin for form file input",
   "main": "dist/formio-file.umd.js",
   "module": "dist/formio-file.esm.js",
