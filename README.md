@@ -9,25 +9,25 @@ This project is a VUEJS form input component that can hande file draging, valida
 
 ## Setup
 
-**Install via NPM**
+### Install via NPM
 
 ```
 npm install --save formio-file
 ```
 
-```
+```js
 import FormioFile from "formio-file";
 ```
 
-if you want to use the default styles just iport them
+**if you want to use the default styles just import them**
 
-```
+```js
 import 'formio-file/src/formio-file.css'
 ```
 
-**Or import directly in your html**
+### Or import directly in your html
 
-```
+```html
 <script src="https://unpkg.com/formio-file"></script>
 ```
 
@@ -71,8 +71,8 @@ import 'formio-file/src/formio-file.css'
 
 **default**
 
-```
-{
+```js
+return {
     containerInput: "formio--file formio--no-drop",
     containerDropzone: "formio--file formio--drop-zone",
     view: "formio--file-view",
@@ -116,7 +116,7 @@ import 'formio-file/src/formio-file.css'
 
 **default**
 
-```
+```js
 function (files, required) {
     if (!files) return false;
     if (required && files.length == 0) return false;
