@@ -5,7 +5,7 @@
 * [Documentation](#documentation)
 
 ## General Info
-This project is a VUEJS form input component that can hande file draging, validation and more.
+This project is a VUEJS @3 form input component that can hande file draging, validation and more.
 
 ## Setup
 
