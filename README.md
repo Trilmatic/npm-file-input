@@ -44,7 +44,7 @@ import 'formio-file/src/formio-file.css'
 
 **default**
 
-```markdown
+```html
 <span><strong>Upload file</strong></span>
 <span v-if="drop"><i>Drop files or click here to upload</i></span>
 ```
@@ -144,7 +144,7 @@ function (files, required) {
 
 You can also call the validate function remotly from parent component
 
-```markdown
+```html
 <template>
     <button @click="$refs.file.validate()">Validate</button>
     <formio-file
@@ -159,7 +159,7 @@ You can also call the validate function remotly from parent component
 ### change
 - emits when the file list has changed
 
-```markdown
+```html
 <template>
     <formio-file
         ref="file"
