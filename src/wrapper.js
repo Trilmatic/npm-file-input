@@ -5,7 +5,7 @@ import component from './formio-file.vue';
 export function install(Vue) {
 	if (install.installed) return;
 	install.installed = true;
-	Vue.component('FormioFile', component);
+	Vue.component('FileInput', component);
 }
 
 // Create module definition for Vue.use()

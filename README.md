@@ -1,4 +1,4 @@
-# Formio File
+# trilmatic File
 ## Table of contents
 * [General info](#general-info)
 * [Setup](#setup)
@@ -12,23 +12,23 @@ This project is a VUEJS @3 form file input component that can hande file draging
 ### Install via NPM
 
 ```console
-npm install --save formio-file
+npm install --save @trilmatic/file-input
 ```
 
 ```js
-import FormioFile from "@formio/file";
+import FileInput from "@trilmatic/file-input";
 ```
 
 if you want to use the default styles just import them too
 
 ```js
-import '@formio/file/src/formio-file.css'
+import '@trilmatic/file-input/src/file-input.css'
 ```
 
 ### Or import directly in your html
 
 ```html
-<script src="https://unpkg.com/formio-file"></script>
+<script src="https://unpkg.com/@trilmatic/file-input"></script>
 ```
 
 ## Documentation
@@ -90,17 +90,17 @@ import '@formio/file/src/formio-file.css'
 
 ```js
 return {
-    containerInput: "formio--file formio--no-drop",
-    containerDropzone: "formio--file formio--drop-zone",
-    view: "formio--file-view",
-    icon: "formio--file-icon",
-    label: "formio--label",
-    required: "formio--required",
-    input: "formio--file-input",
-    file: "formio--selected-file",
-    fileIcon: "formio--selected-file-icon",
-    fileRemove: "formio--selected-file-remove",
-    validationError: "formio--validation-error",
+    containerInput: "trilmatic--file trilmatic--no-drop",
+    containerDropzone: "trilmatic--file trilmatic--drop-zone",
+    view: "trilmatic--file-view",
+    icon: "trilmatic--file-icon",
+    label: "trilmatic--label",
+    required: "trilmatic--required",
+    input: "trilmatic--file-input",
+    file: "trilmatic--selected-file",
+    fileIcon: "trilmatic--selected-file-icon",
+    fileRemove: "trilmatic--selected-file-remove",
+    validationError: "trilmatic--validation-error",
 }
 ```
 #### multiple
@@ -147,9 +147,9 @@ You can also call the validate function remotly from parent component
 ```html
 <template>
     <button @click="$refs.file.validate()">Validate</button>
-    <formio-file
+    <file-input
         ref="file"
-    ></formio-file>
+    ></file-input>
 </template>
 ```
 
@@ -161,10 +161,10 @@ You can also call the validate function remotly from parent component
 
 ```html
 <template>
-    <formio-file
+    <file-input
         ref="file"
         @change="fileHasChanged()"
-    ></formio-file>
+    ></file-input>
 </template>
 ```
 
