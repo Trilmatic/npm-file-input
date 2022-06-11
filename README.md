@@ -1,4 +1,4 @@
-# trilmatic File
+# VUE File Input
 ## Table of contents
 * [General info](#general-info)
 * [Setup](#setup)
@@ -40,7 +40,6 @@ import '@trilmatic/file-input/src/file-input.css'
  - emplty by default
 #### content  
 - content of the input
-- 
 
 *default*
 
