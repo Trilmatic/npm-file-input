@@ -16,13 +16,13 @@ npm install --save formio-file
 ```
 
 ```js
-import FormioFile from "formio-file";
+import FormioFile from "@formio/file";
 ```
 
 if you want to use the default styles just import them too
 
 ```js
-import 'formio-file/src/formio-file.css'
+import '@formio/file/src/formio-file.css'
 ```
 
 ### Or import directly in your html
