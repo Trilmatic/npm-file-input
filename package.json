@@ -1,6 +1,6 @@
 {
   "name": "@trilmatic/file-input",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vuejs plugin for form file input",
   "main": "dist/file-input.umd.js",
   "module": "dist/file-input.esm.js",
